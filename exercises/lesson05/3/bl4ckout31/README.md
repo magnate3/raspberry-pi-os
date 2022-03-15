@@ -17,7 +17,7 @@ Kernel process started. EL 1
 0      , ESR: 2000000, address: 81e0c
 QEMU: Terminated
 ```
-** run with bugs**
+**run with bugs**
 
 # gdb
 ```
