@@ -17,7 +17,19 @@ Kernel process started. EL 1
 0      , ESR: 2000000, address: 81e0c
 QEMU: Terminated
 ```
+
 **run with bugs**
+
+# irq_vector_init  vbar_el1
+
+```
+.globl irq_vector_init
+irq_vector_init:
+        adr     x0, vectors             // load VBAR_EL1 with virtual
+        msr     vbar_el1, x0            // vector table address
+        ret
+```
+**irq_vector_init  vbar_el1 not vbar_el0**
 
 # gdb
 ```
@@ -120,3 +132,28 @@ Backtrace stopped: previous frame inner to this frame (corrupt stack?)
 ```
 **call eret**
 
+
+#  kernel_process
+
+***successfully moving process to user mode***
+
+```
+void kernel_process(){
+        printf("Kernel process started. EL %d\r\n", get_el());
+        int err = move_to_user_mode((unsigned long)&user_process);
+        if (err < 0){
+                printf("Error while moving process to user mode\n\r");
+        }
+        else
+        {
+                printf(" successfully moving process to user mode\n\r");
+        }
+}
+```
+
+```
+qemu-system-aarch64 -machine raspi3 -serial null -serial mon:stdio -nographic -kernel kernel8.img 
+Kernel process started. EL 1
+ successfully moving process to user mode
+User process started. 
+```
