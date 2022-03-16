@@ -44,6 +44,14 @@
 qemu-system-aarch64 -machine raspi3 -serial null -serial mon:stdio -nographic -kernel kernel8.img -s -S
 ```
 
+
+![image](https://github.com/magnate3/raspberry-pi-os/tree/master/exercises/lesson05/4/pic/flow.png)
+
+![image](https://github.com/magnate3/raspberry-pi-os/tree/master/exercises/lesson05/4/pic/fork.png)
+
+![image](https://github.com/magnate3/raspberry-pi-os/tree/master/exercises/lesson05/4/pic/move.png)
+![image](https://github.com/magnate3/raspberry-pi-os/tree/master/exercises/lesson05/4/pic/to_user.png)
+
  ```
 root@ubuntu:~/arm/raspberry-pi-os/exercises/lesson05/3/bl4ckout31# gdb-multiarch build/kernel8.elf 
 GNU gdb (Ubuntu 8.1.1-0ubuntu1) 8.1.1
