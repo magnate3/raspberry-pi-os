@@ -45,12 +45,13 @@ qemu-system-aarch64 -machine raspi3 -serial null -serial mon:stdio -nographic -k
 ```
 
 
-![image](https://github.com/magnate3/raspberry-pi-os/tree/master/exercises/lesson05/4/pic/flow.png)
+![image](https://github.com/magnate3/raspberry-pi-os/blob/master/exercises/lesson05/4/pic/flow.png)
 
-![image](https://github.com/magnate3/raspberry-pi-os/tree/master/exercises/lesson05/4/pic/fork.png)
+![image](https://github.com/magnate3/raspberry-pi-os/blob/master/exercises/lesson05/4/pic/fork.png)
 
-![image](https://github.com/magnate3/raspberry-pi-os/tree/master/exercises/lesson05/4/pic/move.png)
-![image](https://github.com/magnate3/raspberry-pi-os/tree/master/exercises/lesson05/4/pic/to_user.png)
+![image](https://github.com/magnate3/raspberry-pi-os/blob/master/exercises/lesson05/4/pic/move.png)
+
+![image](https://github.com/magnate3/raspberry-pi-os/blob/master/exercises/lesson05/4/pic/to_user.png)
 
  ```
 root@ubuntu:~/arm/raspberry-pi-os/exercises/lesson05/3/bl4ckout31# gdb-multiarch build/kernel8.elf 
